@@ -6,7 +6,7 @@ This document analyzes various cryptographic operations captured in terminal ses
 ## Image Analyses
 
 ### Image 11: SSH Key Fingerprint
-![Image 11](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image11.png)
+![Image 11](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image11.png)
 
 **Command:** `ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub`
 
@@ -21,7 +21,7 @@ This document analyzes various cryptographic operations captured in terminal ses
 **Security Context:** Checking SSH key fingerprints helps verify host authenticity and prevent man-in-the-middle attacks.
 
 ### Image 12: SHA256 Hash of RouterConfig_Version1
-![Image 12](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image12.png)
+![Image 12](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image12.png)
 
 **Command:** `echo -n RouterConfig_Versionl | sha256sum`
 
@@ -32,7 +32,7 @@ This document analyzes various cryptographic operations captured in terminal ses
 **Function:** Hash functions like SHA256 are used for data integrity verification, digital signatures, and password storage.
 
 ### Image 13: SHA256 Hash of RouterConfig_Version2
-![Image 13](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image13.png)
+![Image 13](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image13.png)
 
 **Command:** `echo -n RouterConfig_Version2 | sha256sum`
 
@@ -43,7 +43,7 @@ This document analyzes various cryptographic operations captured in terminal ses
 **Comparison:** The completely different hash output demonstrates the avalanche effect - small input changes produce vastly different hashes.
 
 ### Image 14: MD5 Hashes of Password Variations
-![Image 14](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image14.png)
+![Image 14](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image14.png)
 
 **Commands:**
 ```bash
@@ -58,7 +58,7 @@ echo -n "Password" | md5sum
 **Security Note:** MD5 is cryptographically broken and should not be used for security purposes. Case sensitivity significantly changes the hash.
 
 ### Image 15: SHA256 Hashes of Router Passwords
-![Image 15](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image15.png)
+![Image 15](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image15.png)
 
 **Commands:**
 ```bash
@@ -75,7 +75,7 @@ echo -n "RouterPassword124" | sha256sum
 **Analysis:** Demonstrates how minor variations (case, number increment) create completely different SHA256 hashes.
 
 ### Image 16: SSH Host Key Verification
-![Image 16](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image16.png)
+![Image 16](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image16.png)
 
 **Command:** `ssh steve@stapp02.stratos.xfusioncorp.com`
 
@@ -86,7 +86,7 @@ echo -n "RouterPassword124" | sha256sum
 **Security Practice:** Users should verify this fingerprint matches the server's known fingerprint before connecting.
 
 ### Image 17: Multiple Hash Algorithms Comparison
-![Image 17](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image17.png)
+![Image 17](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image17.png)
 
 **Commands:**
 ```bash
@@ -103,7 +103,7 @@ echo -n "10.0.0.1:admin:networksec2024" | sha256sum
 **Comparison:** Shows different hash lengths and outputs for the same input string across algorithms.
 
 ### Image 18: MD5 Hash of "password"
-![Image 18](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image18.png)
+![Image 18](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image18.png)
 
 **Command:** `echo -n "password" | md5sum`
 
@@ -112,7 +112,7 @@ echo -n "10.0.0.1:admin:networksec2024" | sha256sum
 **Note:** This matches the hash from Image 14, confirming consistency.
 
 ### Image 19: John the Ripper Installation
-![Image 19](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image19.png)
+![Image 19](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image19.png)
 
 **Description:** Installation process of John the Ripper password cracking tool and its dependencies.
 
@@ -124,14 +124,14 @@ echo -n "10.0.0.1:admin:networksec2024" | sha256sum
 **Security Context:** John the Ripper is used for password strength testing and recovery.
 
 ### Image 20: Creating Hash File
-![Image 20](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image20.png)
+![Image 20](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image20.png)
 
 **Command:** `echo 5f4dcc3b>aafbodb1ld83< deb88c<cf33 >hash.txt`
 
 **Analysis:** This appears to be a malformed command attempting to write a hash to `hash.txt`. The correct syntax would be: `echo "5f4dcc3b5aa765d61d8327deb882cf99" > hash.txt`
 
 ### Image 21: SHA256 Hash of Complex Password
-![Image 21](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image21.png)
+![Image 21](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image21.png)
 
 **Command:** `echo -n "Student1x9k2mP7q" | sha256sum`
 
@@ -140,14 +140,14 @@ echo -n "10.0.0.1:admin:networksec2024" | sha256sum
 **Note:** The output contains spaces and special characters, suggesting potential display or corruption issues.
 
 ### Image 22: Whois Installation
-![Image 22](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image22.png)
+![Image 22](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image22.png)
 
 **Description:** Installation of the `whois` package (version 5.5.22) which is used for querying WHOIS databases.
 
 **Security Context:** Whois helps in gathering domain registration information during reconnaissance phases.
 
 ### Image 23: Bcrypt Password Generation
-![Image 23](https://github.com/D-rank-developer/Network-Security-Practices/blob/2741c3a52b57a91c75510c2d3d66dc65bb523ea3/Applied%2520Cryptography/Hash%2520files/image23.png)
+![Image 23](https://github.com/D-rank-developer/Network-Security-Practices/blob/62f38f185c980e3b8f633b17f85c97b0b4c3e0b9/Applied%20Cryptography/Hash%20files/image23.png)
 
 **Command:** `mkpasswd -m bcrypt`
 
