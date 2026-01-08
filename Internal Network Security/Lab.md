@@ -35,28 +35,28 @@ Based on the lab instructions and image analysis, the network topology is as fol
 The gateway VM was configured with three network adapters as specified in the lab. The configuration is visible in several screenshots:
 
 - Initial network adapter configuration shows four adapters available, with Adapter 1 set to NAT:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image2.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image2.png)
 
 - Adapter 2 configured for Internal Network `intnet1`:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image3.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image3.png)
 
 - Additional adapter configurations show possible variations or additional interfaces:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image4.png)
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image5.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image4.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image5.png)
 
 **Step 2: Static IP Configuration**
 
 The netplan configuration was modified to assign static IP addresses to the internal interfaces:
 
 - Editing the netplan configuration file:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image8.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image8.png)
 
 - Final netplan configuration showing the static IP assignments:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image9.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image9.png)
 
 - Verification of IP address assignment using `ip a` command:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image6.png)
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image7.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image6.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image7.png)
 
 **Note**: The `ip a` output shows an additional interface `enp0s10` with IP `192.168.250.1/24` that is not configured in the netplan file. This suggests either:
 1. An older configuration from a previous lab
@@ -67,15 +67,15 @@ The netplan configuration was modified to assign static IP addresses to the inte
 **Step 1: Network Adapter Setup**
 
 - Network settings showing connection to Internal Network `intnet1`:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image10.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image10.png)
 
 **Step 2: Static IP Configuration**
 
 - Netplan configuration for the web server:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image11.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image11.png)
 
 - Verification of IP address assignment:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image12.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image12.png)
 
 ### **Part 3: WorkStation VM Configuration**
 
@@ -84,46 +84,46 @@ The netplan configuration was modified to assign static IP addresses to the inte
 The workstation was configured using the GUI network manager:
 
 - Network status indicator:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image13.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image13.png)
 
 - Network connection details showing IP configuration:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image14.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image14.png)
 
 - Network adapter identity information:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image15.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image15.png)
 
 - Manual IPv4 configuration settings:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image16.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image16.png)
 
 ### **Part 5: Enabling IP Forwarding and NAT**
 
 **Step 1: Enabling IP Forwarding**
 
 - Editing the sysctl configuration file:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image17.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image17.png)
 
 - Sysctl.conf file with IP forwarding enabled:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image18.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image18.png)
 
 - Applying the sysctl changes:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image19.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image19.png)
 
 **Step 2: Configuring NAT Masquerading**
 
 - Adding the iptables NAT masquerade rule:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image20.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image20.png)
 
 ### **Part 6: Additional Firewall Configuration**
 
 **Step 1: Installing iptables-persistent**
 
 - Installing the package to save iptables rules:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image21.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image21.png)
 
 **Step 2: Viewing iptables Rules**
 
 - Current iptables rules showing multiple duplicate entries:
-  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/c6593b44cdcfe868f3d2eee39255b48e433ef0a5/Internal%20Network%20Security/VM%20config/image22.png)
+  ![](https://github.com/D-rank-developer/Network-Security-Practices/blob/02d65d3c8b34b8a5de4f5dab83418c56625a3df0/Internal%20Network%20Security/VM%20config/image22.png)
 
 ## **Analysis of Configuration Against Lab Requirements**
 
